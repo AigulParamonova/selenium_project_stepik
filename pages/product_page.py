@@ -28,3 +28,21 @@ class ProductPage(BasePage):
         assert product_price.text == message_price_in_cart.text, (
                 "Price is uncorrect"
             )
+
+    def success_message_came_out(self):
+        assert self.is_element_present(
+            *ProductPageLocators.PRODUCT_IN_CART
+        ), "Success message didn't come out"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(
+            *ProductPageLocators.PRODUCT_IN_CART
+        ), "Success message is presented, but should not be"
+
+    def succes_message_should_dissapear(self):
+        assert self.is_disappeared(
+            *ProductPageLocators.PRODUCT_IN_CART
+        ), "Success message hasn't disappeared"
+
+    def test_guest_cant_see_product_in_basket_opened_from_product_page(self):
+        pass
