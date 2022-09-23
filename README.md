@@ -48,6 +48,7 @@ pip install -r requirements.txt
 ```
 pytest -v tests/main_page.py
 pytest -v tests/test_product_page.py
+pytest -v --tb=line --language=en -m need_review (для ревью)
 ```
 
 ### Технологии:
