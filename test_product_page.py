@@ -1,10 +1,11 @@
 import time
 import pytest
 
-from .product_page import ProductPage
-from .login_page import LoginPage
+from .pages.product_page import ProductPage
+from .pages.login_page import LoginPage
+from .pages.basket_page import BasketPage
+
 from .links import login_link, product_link
-from .basket_page import BasketPage
 
 
 class TestUserAddToBasketFromProductPage():
