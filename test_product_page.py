@@ -1,10 +1,10 @@
 import time
 import pytest
 
-from pages.product_page import ProductPage
-from pages.login_page import LoginPage
+from .product_page import ProductPage
+from .login_page import LoginPage
 from .links import login_link, product_link
-from pages.basket_page import BasketPage
+from .basket_page import BasketPage
 
 
 class TestUserAddToBasketFromProductPage():
@@ -43,7 +43,7 @@ class TestUserAddToBasketFromProductPage():
                           pytest.param("?promo=offer7", marks=pytest.mark.xfail),
                           "?promo=offer8",
                           "?promo=offer9"])
-def test_quest_can_add_product_to_basket(browser, link_param):
+def test_guest_can_add_product_to_basket(browser, link_param):
     link = f"http://selenium1py.pythonanywhere.com/en-gb/catalogue/coders-at-work_207/{link_param}"
     page = ProductPage(browser, link)
     page.open()
@@ -61,6 +61,7 @@ def test_guest_cant_see_success_message(browser):
     page.should_not_be_success_message()
 
 
+@pytest.mark.need_review
 def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     page = ProductPage(browser, product_link)
     page.open()

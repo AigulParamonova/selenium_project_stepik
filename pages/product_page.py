@@ -43,6 +43,3 @@ class ProductPage(BasePage):
         assert self.is_disappeared(
             *ProductPageLocators.PRODUCT_IN_CART
         ), "Success message hasn't disappeared"
-
-    def test_guest_cant_see_product_in_basket_opened_from_product_page(self):
-        pass
