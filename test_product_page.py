@@ -32,7 +32,7 @@ class TestUserAddToBasketFromProductPage():
         page.should_be_correct_price_product()
 
 
-@pytest.mark.need_review
+@pytest.mark.skip
 @pytest.mark.parametrize('link_param',
                          ["?promo=offer0",
                           "?promo=offer1",
