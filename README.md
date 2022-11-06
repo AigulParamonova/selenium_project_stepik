@@ -1,10 +1,13 @@
 ## Автоматизация тестирования с помощью Selenium и Python
 
-Финальный проект курса "Автоматизация тестирования с помощью Selenium и Python" (Stepik)
+Финальный проект
 
+Предварительно скачиваем драйвер браузера Chrome и перемещаем в диск C:папку chromedriver:
+```
+https://chromedriver.chromium.org/downloads
+```
 
 Чтобы запустить проект нужно клонировать репозиторий и перейти в него в командной строке:
-
 ```
 git clone https://github.com/AigulParamonova/selenium_project_stepik.git
 ```
